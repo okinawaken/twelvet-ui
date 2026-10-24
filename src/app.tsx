@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import { AvatarDropdown, AvatarName } from './components/RightContent/AvatarDropdown';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { PageLoading, SettingDrawer } from '@ant-design/pro-components';
@@ -76,8 +75,8 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
         // menuRender: () => {
         //   return 'menuRender test'
         // },
-        // 自定义底部
-        footerRender: () => <Footer />,
+        // 不展示底部
+        footerRender: false,
         // 渲染菜单数据
         menuDataRender: () =>
             initialState?.currentUser?.menus ? initialState?.currentUser?.menus : [],

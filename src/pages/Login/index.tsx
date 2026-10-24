@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import { SelectLang } from '@/components/RightContent';
 import { CheckCircleFilled, LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Helmet, history, useIntl, useModel } from '@umijs/max';
@@ -147,16 +146,6 @@ const useStyles = createStyles(({ token }) => {
             height: 44,
             fontSize: 15,
             fontWeight: 500,
-        },
-        footer: {
-            padding: '8px 0',
-            textAlign: 'center',
-            fontSize: 12,
-            color: token.colorTextTertiary,
-            '.ant-pro-global-footer': {
-                margin: 0,
-                padding: 0,
-            },
         },
         lang: {
             position: 'fixed',
@@ -410,10 +399,6 @@ const Login: React.FC = () => {
                             </Button>
                         </Form.Item>
                     </Form>
-                </div>
-
-                <div className={styles.footer}>
-                    <Footer />
                 </div>
             </main>
         </div>
