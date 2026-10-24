@@ -14,7 +14,6 @@ export default {
     'app.preview.down.block': 'این صفحه را در پروژه محلی خود بارگیری کنید',
     'app.welcome.link.fetch-blocks': 'دریافت تمام بلوک',
     'app.welcome.link.block-list': 'به سرعت صفحات استاندارد مبتنی بر توسعه "بلوک" را بسازید',
-    'app.development.documentation': 'سند توسعه',
     ...globalHeader,
     ...menu,
     ...settingDrawer,

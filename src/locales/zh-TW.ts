@@ -13,7 +13,6 @@ export default {
     'layout.user.link.terms': '條款',
     'app.preview.down.block': '下載此頁面到本地項目',
 
-    'app.development.documentation': '開發文檔',
     'system.check': '查看',
     'system.add': '新增',
     'system.update': '修改',

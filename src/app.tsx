@@ -1,18 +1,15 @@
 import Footer from '@/components/Footer';
 import { AvatarDropdown, AvatarName } from './components/RightContent/AvatarDropdown';
-import { QuestionCircleOutlined } from '@ant-design/icons';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { PageLoading, SettingDrawer } from '@ant-design/pro-components';
 import { errorConfig } from './requestErrorConfig';
-import { history, RunTimeLayoutConfig, SelectLang, useIntl as i18n } from '@umijs/max';
+import { history, RunTimeLayoutConfig, SelectLang } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
 import { message } from 'antd';
 import TWT from './setting';
 import { getCurrentUser, getRouters } from './pages/Login/service';
 import { system, timedRefreshToken } from '@/utils/twelvet';
-import { Question } from './components/RightContent';
 
-const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/login';
 
 /**
@@ -84,7 +81,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
         // 渲染菜单数据
         menuDataRender: () =>
             initialState?.currentUser?.menus ? initialState?.currentUser?.menus : [],
-        actionsRender: () => [<Question key="doc" />, <SelectLang key="SelectLang" />],
+        actionsRender: () => [<SelectLang key="SelectLang" />],
         avatarProps: {
             src: `${TWT.static}${initialState?.currentUser?.user?.avatar}`,
             title: <AvatarName />,
@@ -113,23 +110,6 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
             // 关闭菜单多语言
             locale: false,
         },
-        links: isDev
-            ? [
-                  <a key="docs" href="https://doc.twelvet.cn/" target="_blank" rel="noreferrer">
-                      <QuestionCircleOutlined />
-                      <span>{i18n().formatMessage({ id: 'app.development.documentation' })}</span>
-                  </a>,
-                  <a
-                      key="openapi"
-                      href="http://127.0.0.1:8080/doc.html"
-                      target="_blank"
-                      rel="noreferrer"
-                  >
-                      <QuestionCircleOutlined />
-                      <span>Swagger</span>
-                  </a>,
-              ]
-            : [],
         menuHeaderRender: undefined,
         // 自定义 403 页面
         unAccessible: <div>unAccessible</div>,

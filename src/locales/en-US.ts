@@ -15,7 +15,6 @@ export default {
     'app.welcome.link.fetch-blocks': 'Get all block',
     'app.welcome.link.block-list': 'Quickly build standard, pages based on `block` development',
 
-    'app.development.documentation': 'Development Documentation',
     'system.check': 'Check',
     'system.add': 'Add',
     'system.update': 'Update',

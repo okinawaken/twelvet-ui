@@ -15,7 +15,6 @@ export default {
     'app.welcome.link.fetch-blocks': '',
     'app.welcome.link.block-list': '',
 
-    'app.development.documentation': '開発ドキュメント',
     'system.check': 'チェック',
     'system.add': '追加',
     'system.update': '更新',

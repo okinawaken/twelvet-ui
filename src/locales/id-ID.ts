@@ -14,7 +14,6 @@ export default {
     'app.preview.down.block': 'Unduh halaman ini dalam projek lokal anda',
     'app.welcome.link.fetch-blocks': 'Dapatkan semua blok',
     'app.welcome.link.block-list': 'Buat standar dengan cepat, halaman-halaman berdasarkan pengembangan `block`',
-    'app.development.documentation': 'Dokumen Pengembangan',
     ...globalHeader,
     ...menu,
     ...settingDrawer,
